@@ -1,0 +1,100 @@
+p {
+  font-size: 25px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.container,
+.container2,
+.container3,
+.container4 {
+  position: relative;
+  width: 40%;
+  float: left;
+}
+.container .image,
+.container2 .image,
+.container3 .image,
+.container4 .image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* الصورة الاولي slide Top   */
+.container .hover {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+.container:hover .hover {
+  bottom: 0;
+  height: 100%;
+}
+/* الصورة التانية slide bottom  */
+.container2 .hover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+.container2:hover .hover {
+  top: 0;
+  height: 100%;
+}
+/* الصورة الثالثة slide left */
+.container3 .hover {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  width: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+.container3:hover .hover {
+  width: 100%;
+  right: 0;
+}
+/* الصورة الثالثة slide left */
+.container4 .hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 100%;
+  height: 100%;
+  overflow: hidden;
+  width: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+.container4:hover .hover {
+  width: 100%;
+  left: 0;
+}
+
+.container .hover .text,
+.container2 .hover .text,
+.container3 .hover .text,
+.container4 .hover .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
